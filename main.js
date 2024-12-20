@@ -89,7 +89,18 @@ function calculateResult() {
     // 获取最终停止时的角度，并确定指针指向的奖品
     const finalAngle = (2 * Math.PI - currentAngle) % (2 * Math.PI);
     const segmentIndex = Math.floor(finalAngle / anglePerSegment);
-    alert(`本次大转盘抽取到: ${segments[segmentIndex]}!`);
+    if(segments[segmentIndex] === "同甘") {
+        alert(`抽到同甘啦~抽下一个人吧~`);
+    };
+    if(segments[segmentIndex] === "共苦") {
+        alert(`抽到共苦了！都得干活！`);
+    };
+    if(segments[segmentIndex] === "你苦") {
+        alert(`抽到你苦了！同桌干活！`);
+    };
+    if(segments[segmentIndex] === "我苦") {
+        alert(`抽到我苦了！自认倒霉吧！`);
+    }
 }
 
 // 绑定按钮事件
