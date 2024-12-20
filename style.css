@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.wheel-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+canvas {
+    border: 10px solid #00796b;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 指针样式 */
+.pointer {
+    position: absolute;
+    top: 235px;
+    left: 100%;
+    transform: translateX(-50%)rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #d32f2f;
+    z-index: 10;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+button:active {
+    background-color: #00251a;
+}
